@@ -471,13 +471,64 @@ nav .enlaces a:hover {
 }
 
 
-/* Footer */
+/** Contacto **/
+
+.contenedor-contacto {
+    margin-top: 50px;
+}
+
+.metodos-contacto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media(min-width:768px) {
+    .metodos-contacto {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.contacto a {
+    margin-top: 10px;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    justify-items: center;
+    text-decoration: none;
+    text-align: center;
+    color: var(--oscuro);
+}
+
+.contacto .icono-contacto {
+    font-size: 50px;
+    margin-top: 5px;
+}
+
+.contacto .icono-contacto:hover {
+    color: var(--primario);
+}
+
+
+/** Footer **/
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 10px;
+    height: 120px;
+    background-color: var(--oscuro);
+    color: var(--blanco);
+    text-align: center;
+}
+
+footer p {
+    margin-top: 15px;
+}
 
 .logo-footer {
     width: 6rem;
-    margin: auto;
-    padding-top: 10rem;
-    margin-bottom: var(--espacios);
 }
 
 .logo-footer img {
