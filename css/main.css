@@ -6,10 +6,10 @@
     --oscuro: #212121;
     --gris: #f2f2f2;
     --celeste: #1498a4;
-    --titulos: 33px;
-    --subTitulos: 15px;
-    --margenes: 60px;
-    --espacios: 10px;
+    --titulos: 6.5rem;
+    --subTitulos: 3rem;
+    --margenes: 6rem;
+    --espacios: 1rem;
     --espaciosContenido: 45px;
     --fuenteTitulo: 'Great Vibes', cursive;
     --fuentePrincipal: 'Mada', sans-serif;
@@ -50,13 +50,13 @@ body {
     overflow: hidden;
 }
 
-.contenedor>h3 {
+.contenedor h3 {
     font-size: var(--titulos);
     color: var(--primario);
     margin-bottom: var(--espacios);
 }
 
-.contenedor>p {
+.contenedor p {
     font-size: var(--subTitulos);
     color: var(--primario);
     font-weight: 300;
@@ -196,7 +196,7 @@ img {
 header {
     width: 100%;
     height: 90vh;
-    background: linear-gradient(0deg, rgba(22, 86, 87, 0.09) 0%, rgba(228, 216, 191, 0.09) 100%), url(../img/hero.jpg);
+    background: linear-gradient(0deg, rgba(22, 86, 87, 0.09) 0%, rgba(228, 216, 191, 0.09) 100%), url(../img/hero2.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -272,12 +272,14 @@ nav .enlaces a:hover {
 
 .textos-header>h1 {
     font-family: var(--fuenteTitulo);
-    font-size: 8rem;
+    font-size: 15rem;
+    margin-bottom: 0;
 }
 
 .textos-header>h2 {
-    font-size: 3rem;
-    font-weight: 300;
+    font-size: 8rem;
+    font-weight: 400;
+    margin-top: 0;
 }
 
 
@@ -301,7 +303,7 @@ nav .enlaces a:hover {
 }
 
 .section-card {
-    height: 70%;
+    height: 80%;
 }
 
 .content-card img {
@@ -313,7 +315,11 @@ nav .enlaces a:hover {
 .texto-card {
     height: 20%;
     width: 100%;
-    padding: var(--espacios) 0;
+}
+
+.texto-card h4 {
+    font-weight: 400;
+    font-size: 2rem;
 }
 
 
@@ -398,7 +404,7 @@ nav .enlaces a:hover {
 
 /* mediaqueries */
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
     .nav2 {
         color: #ffffff;
     }
@@ -426,10 +432,10 @@ nav .enlaces a:hover {
         color: #ffffff;
     }
     .textos-header>h1 {
-        font-size: 70px;
+        font-size: 8.5rem;
     }
     .textos-header>h2 {
-        font-size: 35px;
+        font-size: 5rem;
     }
     .content-card {
         width: 48%;
@@ -446,6 +452,12 @@ nav .enlaces a:hover {
 @media (max-width: 500px) {
      :root {
         --espacios-contenidos: 25px;
+    }
+    .textos-header>h1 {
+        font-size: 6.5rem;
+    }
+    .textos-header>h2 {
+        font-size: 4rem;
     }
     .content-card {
         width: 90%;
