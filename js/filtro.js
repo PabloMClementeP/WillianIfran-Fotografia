@@ -10,4 +10,5 @@ $(function() {
             $('.cont-galeria').filter('.' + valor).show('1000');
         }
     });
+
 });

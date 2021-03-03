@@ -1,3 +1,8 @@
+document.addEventListener('DOMContentLoaded', function() {
+    scrollNav();
+});
+
+
 // Variables
 let nav = document.getElementById('nav');
 let menu = document.getElementById('enlaces');
@@ -7,6 +12,24 @@ let botones = document.getElementsByClassName('btn-nav');
 let cerrado = true;
 
 
+
+function scrollNav() {
+
+    const enlaces = document.querySelectorAll('.enlaces a');
+
+    enlaces.forEach(function(enlace) {
+        enlace.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const seccion = document.querySelector(e.target.attributes.href.value);
+            seccion.scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
+    });
+}
+
 function menus() {
     let desplazamiento_actual = window.pageYOffset;
     if (desplazamiento_actual <= 300) {
@@ -14,11 +37,13 @@ function menus() {
         nav.classList.add('nav1');
         nav.style.transition = '1s';
         menu.style.top = '80px';
+        abrir.style.color = '#FFF';
     } else {
         nav.classList.remove('nav1');
         nav.classList.add('nav2');
         nav.style.transition = '1s';
         menu.style.top = '100px';
+        abrir.style.color = '#000';
     }
 }
 

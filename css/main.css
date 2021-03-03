@@ -216,7 +216,7 @@ nav {
 
 .nav2 {
     background: var(--gris);
-    height: 10rem;
+    height: 7rem;
     color: var(--oscuro);
 }
 
@@ -232,9 +232,10 @@ nav {
 }
 
 nav .enlaces a {
+    font-size: 2rem;
     display: inline-block;
-    padding: 0.5rem 0;
-    margin-right: 0.7rem;
+    padding: 0.5rem 1rem;
+    margin-right: .7rem;
     font-weight: 300;
     text-decoration: none;
     border-bottom: 3px solid transparent;
@@ -248,10 +249,11 @@ nav .enlaces a:hover {
 
 .logo,
 .logo img {
-    height: 8rem;
+    height: 7.5rem;
 }
 
 .icono {
+    color: #212121;
     display: none;
     font-size: 2.4rem;
     padding: 2.35rem 2rem;
