@@ -1,5 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     scrollNav();
+
+    lightbox.option({
+        disableScrolling: true
+    })
 });
 
 

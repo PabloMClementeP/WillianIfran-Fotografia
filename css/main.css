@@ -1,11 +1,12 @@
 /* Variables */
 
 :root {
-    --primario: rgb(243, 198, 101);
+    --primario1: rgb(243, 198, 101);
+    --primario: #fb7813;
     --blanco: #fff;
     --oscuro: #212121;
-    --gris: #f2f2f2;
-    --celeste: #1498a4;
+    --gris: #dbdbdb;
+    --celeste: #17706e;
     --titulos: 6.5rem;
     --subTitulos: 3rem;
     --margenes: 6rem;
@@ -33,7 +34,7 @@ body {
     font-size: 16px;
     /* 1rem = 10px */
     font-family: var(--fuentePrincipal);
-    background-color: var(--blanco);
+    background-color: var(--gris);
 }
 
 .centrado {
@@ -76,6 +77,40 @@ body {
 img {
     max-width: 100%;
     vertical-align: top;
+}
+
+
+/** Parallax  **/
+
+.parallax::before {
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-filter: brightness(.8);
+    filter: brightness(.6);
+    margin-top: 50px;
+    z-index: -5;
+}
+
+
+/** Clearfix **/
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
 }
 
 
@@ -206,6 +241,7 @@ nav {
     width: 100%;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
     color: var(--blanco);
+    z-index: 1000;
 }
 
 .nav1 {
@@ -322,6 +358,51 @@ nav .enlaces a:hover {
 .texto-card h4 {
     font-weight: 400;
     font-size: 2rem;
+}
+
+
+/* Compromiso */
+
+.compromiso {
+    position: relative;
+    height: 80vh;
+}
+
+.compromiso::before {
+    background-image: url(../img/parallax.jpg);
+    content: '';
+}
+
+.lista-compromiso {
+    position: relative;
+    padding: 5rem 2rem;
+}
+
+.lista-compromiso li {
+    width: 50%;
+    float: left;
+    text-align: center;
+    color: var(--blanco);
+    font-size: .8em;
+    list-style: none;
+    margin-top: 8rem;
+}
+
+.lista-compromiso li img {
+    width: 20%;
+    filter: invert(.8);
+}
+
+@media (min-width:768px) {
+    .lista-compromiso {
+        position: relative;
+        padding: 100px 20px;
+    }
+    .lista-compromiso li {
+        width: 25%;
+        margin-top: 15rem;
+        font-size: 1.2em;
+    }
 }
 
 
