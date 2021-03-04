@@ -230,10 +230,23 @@ img {
 
 header {
     width: 100%;
-    height: 90vh;
+    height: 350px;
     background: linear-gradient(0deg, rgba(22, 86, 87, 0.09) 0%, rgba(228, 216, 191, 0.09) 100%), url(../img/hero2.jpg);
     background-position: center;
     background-size: cover;
+    transition: all ease-in-out .5s;
+}
+
+@media (min-width: 500px) {
+    header {
+        height: 600px;
+    }
+}
+
+@media (min-width: 768px) {
+    header {
+        height: 800px;
+    }
 }
 
 nav {
@@ -373,36 +386,35 @@ nav .enlaces a:hover {
     content: '';
 }
 
-.lista-compromiso {
-    position: relative;
-    padding: 5rem 2rem;
+.contenedor-compromiso {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
-.lista-compromiso li {
-    width: 50%;
-    float: left;
+.div-compromiso {
+    margin-top: 60px;
+    display: grid;
+    grid-template-rows: 1fr;
+    justify-items: center;
     text-align: center;
     color: var(--blanco);
-    font-size: .8em;
-    list-style: none;
-    margin-top: 8rem;
 }
 
-.lista-compromiso li img {
-    width: 20%;
-    filter: invert(.8);
+@media(min-width: 768px) {
+    .div-compromiso {
+        margin-top: 150px;
+    }
 }
 
-@media (min-width:768px) {
-    .lista-compromiso {
-        position: relative;
-        padding: 100px 20px;
-    }
-    .lista-compromiso li {
-        width: 25%;
-        margin-top: 15rem;
-        font-size: 1.2em;
-    }
+.div-compromiso img {
+    height: 40px;
+    width: 100%;
+    filter: invert(1);
+}
+
+.div-compromiso h4 {
+    margin-bottom: 0;
+    font-size: 2rem;
 }
 
 
@@ -532,6 +544,7 @@ footer p {
 }
 
 .logo-footer img {
+    height: 25px;
     width: 100%;
 }
 
@@ -604,6 +617,6 @@ footer p {
         width: 85%;
     }
     .logo-footer {
-        width: 80%;
+        width: 20%;
     }
 }
