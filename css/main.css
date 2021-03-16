@@ -715,11 +715,17 @@ footer p {
         font-size: 4rem;
     }
     .content-card {
-        width: 90%;
+        width: 45%;
+        height: 20rem;
     }
-    .caja-servicios {
-        width: 90%;
-        margin-bottom: var(--margenes);
+    .content-card img {
+        object-fit: contain;
+    }
+    .texto-card h4 {
+        font-weight: 400;
+        font-size: 2rem;
+        margin: 0;
+        padding: 0;
     }
     .galeria .cont-galeria {
         width: 85%;
