@@ -1,8 +1,7 @@
 /* Variables */
 
 :root {
-    --primario1: rgb(243, 198, 101);
-    --primario: #fb7813;
+    --primario: #DA4616;
     --blanco: #fff;
     --oscuro: #212121;
     --gris: #dbdbdb;
@@ -308,13 +307,13 @@ nav {
 .nav1 {
     background: transparent;
     height: 9rem;
-    color: var(--primario);
+    color: var(--blanco);
 }
 
 .nav2 {
     background: var(--gris);
     height: 7rem;
-    color: var(--oscuro);
+    color: var(--primario);
 }
 
 .contenedor-nav {
@@ -667,10 +666,22 @@ footer p {
         display: block;
         cursor: pointer;
     }
-    .enlaces {
+    .nav1 .enlaces {
         position: fixed;
         top: 80px;
-        background: #414040;
+        margin-top: 10px;
+        background: var(--primario);
+        left: 0;
+        height: 100%;
+        transition: 1s;
+        width: 0;
+        overflow: hidden;
+    }
+    .nav2 .enlaces {
+        position: fixed;
+        top: 80px;
+        margin-top: -30px;
+        background: var(--primario);
         left: 0;
         height: 100%;
         transition: 1s;
@@ -683,7 +694,7 @@ footer p {
         height: 50px;
         padding: 20px;
         text-align: center;
-        background: #34495e;
+        background: var(--primario);
         color: #ffffff;
     }
     .textos-header>h1 {
