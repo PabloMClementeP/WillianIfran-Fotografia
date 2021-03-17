@@ -15,8 +15,31 @@ let abrir = document.getElementById('open');
 let botones = document.getElementsByClassName('btn-nav');
 let cerrado = true;
 
+//Variable y funcion para el boton de darkmode
+const btnSwitch = document.querySelector('#switch');
+
+btnSwitch.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    btnSwitch.classList.toggle('active');
+
+    // guarda en localstorage 
+    if (document.body.classList.contains('dark')) {
+        localStorage.setItem('dark-mode', 'true');
+    } else {
+        localStorage.setItem('dark-mode', 'false');
+    }
+});
+
+if (localStorage.getItem('dark-mode') === 'true') {
+    document.body.classList.add('dark');
+    btnSwitch.classList.add('active');
+} else {
+    document.body.classList.remove('dark');
+    btnSwitch.classList.remove('active');
+}
 
 
+// funcion para scroll de navegación
 function scrollNav() {
 
     const enlaces = document.querySelectorAll('.enlaces a');
@@ -34,6 +57,8 @@ function scrollNav() {
     });
 }
 
+
+// cambio de menu desktop - mobil
 function menus() {
     let desplazamiento_actual = window.pageYOffset;
     if (desplazamiento_actual <= 300) {
@@ -51,7 +76,7 @@ function menus() {
     }
 }
 
-
+// cambia estado en menu mobil entre abierto o cerrado
 function apertura() {
     if (cerrado) {
         menu.style.width = '70vw';
